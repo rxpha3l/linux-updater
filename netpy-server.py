@@ -100,7 +100,7 @@ def get_ip_address():
     return s.getsockname()[0]
 
 
-def send_ip(host='192.168.154.69', port=5556, message=get_ip_address()):
+def send_ip(host='192.168.1.56', port=5556, message=get_ip_address()):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((host, port))
         s.send(message.encode('utf-8'))
